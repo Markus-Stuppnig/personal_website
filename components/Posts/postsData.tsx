@@ -1,4 +1,4 @@
-export interface Journey {
+export interface Post {
   title: string;
   description: string[];
   imagePath: string;
@@ -6,7 +6,7 @@ export interface Journey {
   width: number;
 }
 
-export const journeysData: Journey[] = [
+export const postsData: Post[] = [
   {
     title: "Personal Growth",
     description: ["TODO books, nutrition, fitness, habits"],

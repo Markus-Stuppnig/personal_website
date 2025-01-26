@@ -1,7 +1,8 @@
 export const data = {
   name: "Markus Stuppnig",
   main_title: "Personal Website",
-  slogan_img: "/slogan.png",
+  slogan_img: "/images/carpe-diem.png",
+  slogan_alt_text: "Carpe Diem",
   slogan_img_size: 600,
 
   introduction_main: "Hi, I’m Markus.",

@@ -29,7 +29,7 @@ export const projectsData: Project[] = [
     githublink: "",
     weblink: "https://www.diemp.org",
     pypilink: "",
-    progress: 15,
+    progress: 50,
   },
   {
     title: "VSA",

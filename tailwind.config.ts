@@ -37,8 +37,6 @@ const config: Config = {
 
       primary: "#74c1fc",
       secondary: "#4a65ff",
-      // secondary: "#163157",
-      // secondaryAccent: "#0a375e",
     },
     extend: {
       fontSize: {

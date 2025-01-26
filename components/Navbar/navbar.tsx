@@ -25,11 +25,7 @@ const Header = () => {
           <Link href="/">
             <Heading
               size="text-base"
-              className={
-                pathUrl === "/"
-                  ? `font-semibold px-2 py-2 text-secondary`
-                  : `font-semibold px-2 py-2 text-primary hover:text-secondary transition-colors`
-              }
+              className={`font-semibold px-2 py-2 text-primary hover:text-secondary transition-colors`}
             >
               {data.name}
             </Heading>
@@ -43,7 +39,7 @@ const Header = () => {
                     <Heading
                       size="text-base"
                       className={
-                        pathUrl === menuItem.path
+                        pathUrl.endsWith(menuItem.path)
                           ? `font-semibold px-2 py-2 text-secondary`
                           : `font-semibold px-2 py-2 text-primary hover:text-secondary transition-colors`
                       }
@@ -118,7 +114,7 @@ const Header = () => {
                       <Link
                         href={`${menuItem.path}`}
                         className={
-                          pathUrl === menuItem.path
+                          pathUrl.endsWith(menuItem.path)
                             ? `${navbarFontWeight} ${navbarItemsSelected}`
                             : `${navbarFontWeight} ${navbarItemsDefault} ${navbarItemsSelectedOnHover}`
                         }

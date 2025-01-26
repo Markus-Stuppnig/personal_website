@@ -21,12 +21,11 @@ export default function ThemeContextProvider({
   const [theme, setTheme] = useState<Theme>("light");
 
   const toggleTheme = () => {
-    console.log("only light theme available right now: theme-context.tsx")
-    // if (theme === "light") {
-    //   setThemeOnWindow("dark");
-    // } else {
-    //   setThemeOnWindow("light");
-    // }
+    if (theme === "light") {
+      setThemeOnWindow("dark");
+    } else {
+      setThemeOnWindow("light");
+    }
   };
 
   const setThemeOnWindow = (newTheme: string) => {
@@ -39,14 +38,16 @@ export default function ThemeContextProvider({
       window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
-  }
+  };
 
   useEffect(() => {
+    setThemeOnWindow("light");
+    console.log("Only light theme supported");
+
     // const localTheme = window.localStorage.getItem("theme") as Theme | null;
 
     // if (localTheme) {
     //   setTheme(localTheme);
-    //   alert(localTheme)
 
     //   if (localTheme === "dark") {
     //     document.documentElement.classList.add("dark");
@@ -55,9 +56,6 @@ export default function ThemeContextProvider({
     //   setTheme("dark");
     //   document.documentElement.classList.add("dark");
     // }
-
-    setThemeOnWindow("light");
-
   }, []);
 
   return (

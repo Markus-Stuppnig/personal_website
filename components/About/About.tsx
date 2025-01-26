@@ -19,7 +19,7 @@ export default function About() {
         >
           <Image
             src={data.slogan_img}
-            alt="The Future is Cloud Text"
+            alt={data.slogan_alt_text}
             width={1000}
             height={1000}
             priority={true}

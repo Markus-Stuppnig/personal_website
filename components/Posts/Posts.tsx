@@ -1,10 +1,10 @@
 import React from "react";
-import { journeysData } from "./journeysData";
-import JourneySection from "@/components/Journeys/JourneySection";
+import { postsData } from "./postsData";
+import PostsSection from "@/components/Posts/PostsSection";
 import Heading from "@/components/miscellaneous/Heading";
 import SectionDivider from "@/components/miscellaneous/SectionDivider";
 
-export default function Journeys() {
+export default function Posts() {
   return (
     <section
       id="projects"
@@ -18,7 +18,7 @@ export default function Journeys() {
             weight="font-semibold"
             className="mb-5"
           >
-            Journeys
+            Posts
           </Heading>
           <Heading
             color="white"
@@ -32,9 +32,9 @@ export default function Journeys() {
       </div>
 
       <div className="flex flex-col h-full">
-        {journeysData.map((item, index) => (
+        {postsData.map((item, index) => (
           <React.Fragment key={index}>
-            <JourneySection journey={item} index={index} />
+            <PostsSection post={item} index={index} />
             <SectionDivider height="h-[15rem]" />
           </React.Fragment>
         ))}
